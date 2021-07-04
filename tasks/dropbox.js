@@ -52,6 +52,8 @@ module.exports = function (grunt) {
         // Use encoding = null to keep the file as a Buffer
         reqOptions = {
           access_token: options.access_token,
+          namespace_id: options.namespace_id || false,
+          select_user: options.select_user || false,
           dropboxPath: dropboxPath,
           fileBuffer: grunt.file.read(filepath, { encoding : null })
         };
